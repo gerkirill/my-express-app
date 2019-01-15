@@ -12,7 +12,7 @@ describe('loading express', function () {
     server.close(done);
   });
 
-  it('responds to /', function testSlash(done) {
+  it('responds to /non-existing-route with 404 error page', function testSlash(done) {
     request(server)
       .get('/non-existing-route')
       .expect(/Not Found/)
