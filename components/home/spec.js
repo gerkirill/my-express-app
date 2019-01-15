@@ -15,6 +15,7 @@ describe('loading express', function () {
   it('responds to /', function testSlash(done) {
     request(server)
       .get('/')
+      .expect(/Welcome to Express/)
       .expect(200, done);
   });
 });

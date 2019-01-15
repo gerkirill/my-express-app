@@ -12,10 +12,10 @@ describe('loading express', function () {
     server.close(done);
   });
 
-  it('responds to /users', function testUsers(done) {
+  it('responds to /', function testSlash(done) {
     request(server)
-      .get('/users')
-      .expect('respond with a resource')
-      .expect(200, done);
+      .get('/non-existing-route')
+      .expect(/Not Found/)
+      .expect(404, done);
   });
 });
