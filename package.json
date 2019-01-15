@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node-dev ./bin/www",
-    "test": "PORT=3001 mocha -R spec 'components/**/*spec.js'",
+    "test": "TEST=yes PORT=3001 mocha -R spec 'components/**/*spec.js'",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {

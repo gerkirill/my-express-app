@@ -16,7 +16,8 @@ app.set('views', path.join(__dirname, 'components'));
 app.locals.basedir = path.join(__dirname, 'components');
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
+// don't let log output to be mixed with tests output
+if (! process.env.TEST) app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

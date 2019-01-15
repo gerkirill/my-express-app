@@ -1,6 +1,6 @@
 var request = require('supertest');
 
-describe('loading express', function () {
+describe('home component', function () {
   var server;
 
   beforeEach(function () {
